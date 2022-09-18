@@ -14,11 +14,11 @@ namespace MVCnowe.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Category> objCategoryList = _db.Categories;
-            return View(objCategoryList);
+            IEnumerable<User> objUserList = _db.Users;
+            return View(objUserList);
         }
         //get
-        public IActionResult Create()
+        public IActionResult CreateUser()
         {
 
             return View();
@@ -26,19 +26,19 @@ namespace MVCnowe.Controllers
         //post
         [HttpPost] //co to robi
         [ValidateAntiForgeryToken] //co to robi
-        public IActionResult Create(Category obj)
+        public IActionResult CreateUser(User obj)
         {
 
             if (ModelState.IsValid)
             {
-                _db.Categories.Add(obj);
+                _db.Users.Add(obj);
                 _db.SaveChanges();
-                TempData["success"] = "Created item";
+                TempData["success"] = "Created user";
 
                 return RedirectToAction("Index");
             }
             return View(obj);
-            return View(obj);
+           
         }
              
 
