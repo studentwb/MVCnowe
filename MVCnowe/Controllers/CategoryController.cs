@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MVCnowe.Data;
 using MVCnowe.Models;
-using System;
-using System.Threading;
 
 namespace MVCnowe.Controllers
 {

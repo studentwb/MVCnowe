@@ -9,6 +9,7 @@ namespace MVCnowe.Data
         {
 
         }
-        public DbSet<Category> Categories { get; set; } //co robi Dbset
+        public DbSet<Category> Categories { get; set; } 
+        public DbSet<Event> Events { get; set; }
     }
 }
