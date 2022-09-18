@@ -18,7 +18,7 @@ namespace MVCnowe.Controllers
             return View(objCategoryList);
         }
         //get
-        public IActionResult Create()
+        public IActionResult CreateCategory()
         {
             
             return View();
@@ -26,7 +26,7 @@ namespace MVCnowe.Controllers
         //post
         [HttpPost] //co to robi
         [ValidateAntiForgeryToken] //co to robi
-        public IActionResult Create(Category obj)
+        public IActionResult CreateCategory(Category obj)
         {
 
             if (ModelState.IsValid)
@@ -40,7 +40,7 @@ namespace MVCnowe.Controllers
             return View(obj);
         }
         //get
-        public IActionResult Edit(int? id)
+        public IActionResult EditCategory(int? id)
         {
 
             if(id==null || id == 0)
@@ -59,7 +59,7 @@ namespace MVCnowe.Controllers
         //post
         [HttpPost] //co to robi
         [ValidateAntiForgeryToken] //co to robi
-        public IActionResult Edit(Category obj)
+        public IActionResult EditCategory(Category obj)
         {
             if (ModelState.IsValid)
             {
@@ -71,7 +71,7 @@ namespace MVCnowe.Controllers
             return View(obj);
         }
 
-        public IActionResult Delete(int? id)
+        public IActionResult DeleteCategory(int? id)
         {
             if (id == null || id == 0)
             {
@@ -89,7 +89,7 @@ namespace MVCnowe.Controllers
         //post
         [HttpPost] //co to robi
         [ValidateAntiForgeryToken] //co to robi
-        public IActionResult DeletePost(int? id)
+        public IActionResult DeleteCategoryPost(int? id)
         {
             var obj = _db.Categories.Find(id);
 
