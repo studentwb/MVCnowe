@@ -13,6 +13,7 @@ namespace MVCnowe.Models
         [Range(1, 100, ErrorMessage = "Podaj wartosc miedzy 1 a 100")]
         public int DisplayOrder { get; set; }
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
-        
+
     }
+    
 }

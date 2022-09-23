@@ -1,6 +1,8 @@
 ﻿@model IEnumerable<Category> 
+
 @{
     ViewData["Title"] = "Index";
+    
 }
 
 <partial name="_Notification" />
@@ -17,7 +19,7 @@
         </div>
     </div>
 
-
+     @*   <div asp-validation-summary="All"></div>*@
 <table class="table table-bordered tabel-striped" style="width:100%">
     <thead>
         <tr>
@@ -52,4 +54,22 @@
         }
     </tbody>
 </table>
+<table class="table table-bordered tabel-striped" style="width:100%">
+    <thead>
+    <tr>
+        <th>
+            Sum
+        </th>
+        <th>
+            <a asp-controller="Category" asp-action="CountDisplayOrders"><i class="bi bi-pencil-square"></i> Sum</a>
+        </th>
+    </tr>
+    </thead>
+</table>
 </div>
+
+@section Scripts {
+@{
+    <partial name="_ValidationScriptsPartial" />
+}
+}

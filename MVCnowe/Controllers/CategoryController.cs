@@ -20,7 +20,7 @@ namespace MVCnowe.Controllers
         //get
         public IActionResult CreateCategory()
         {
-            
+           
             return View();
         }
         //post
@@ -49,11 +49,13 @@ namespace MVCnowe.Controllers
             }
 
             var categoryFromDb = _db.Categories.Find(id);
-           
-            if(categoryFromDb==null)
+
+            if (categoryFromDb == null)
             {
                 return NotFound();
             }
+            
+            
             return View(categoryFromDb);
         }
         //post
@@ -97,11 +99,22 @@ namespace MVCnowe.Controllers
             {
                 return NotFound();
             }
-                _db.Categories.Remove(obj);
+            _db.Categories.Remove(obj);
             _db.SaveChanges();
             TempData["success"] = "Deleted item";
             return RedirectToAction("Index");
-            
+
+        }
+        public IActionResult CountDisplayOrders()
+        {
+            var obj = _db.Categories.ToList();
+            int counter = 0;
+            foreach (var order in obj)
+            {
+                counter = counter + order.DisplayOrder;
+            }
+            TempData["count"] = counter.ToString();
+            return RedirectToAction("Index");
         }
 
     }
