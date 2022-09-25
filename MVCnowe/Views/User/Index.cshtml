@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<User> 
 @{
     ViewData["Title"] = "Index";
+    
 }
 
 <partial name="_Notification" />
@@ -58,8 +59,15 @@
                         <a asp-controller="User" asp-action="DeleteUser" asp-route-id="@obj.Id"><i class="bi bi-trash-fill"></i> Delete</a>
                     </div>
                 </td>
+                
             </tr>
         }
+       
     </tbody>
 </table>
+   <div class="row pt-5">
+   Count=>@TempData["counter"]<br/>
+   </div>
 </div>
+
+             

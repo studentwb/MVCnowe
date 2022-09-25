@@ -15,13 +15,13 @@ namespace MVCnowe.Controllers
         public IActionResult Index()
         {
             IEnumerable<User> objUserList = _db.Users;
+            CountUsers();
             return View(objUserList);
         }
         //get
         public IActionResult CreateUser()
         {
-
-            return View();
+             return View();
         }
         //post
         [HttpPost] //co to robi
@@ -38,9 +38,19 @@ namespace MVCnowe.Controllers
                 return RedirectToAction("Index");
             }
             return View(obj);
-           
+
         }
-             
+
+        public IActionResult CountUsers()
+        {
+            int Counter = 0;
+            var count = _db.Users.Count();
+            Counter = count;
+            TempData["counter"] = Counter;
+         
+            return RedirectToAction("Index");
+        }
+
 
     }
 }
