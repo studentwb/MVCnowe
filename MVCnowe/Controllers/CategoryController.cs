@@ -17,15 +17,15 @@ namespace MVCnowe.Controllers
             IEnumerable<Category> objCategoryList=_db.Categories;
             return View(objCategoryList);
         }
-        //get
+       
         public IActionResult CreateCategory()
         {
             
             return View();
         }
-        //post
-        [HttpPost] //co to robi
-        [ValidateAntiForgeryToken] //co to robi
+       
+        [HttpPost] 
+        [ValidateAntiForgeryToken] 
         public IActionResult CreateCategory(Category obj)
         {
 
@@ -39,7 +39,7 @@ namespace MVCnowe.Controllers
             }
             return View(obj);
         }
-        //get
+        
         public IActionResult EditCategory(int? id)
         {
 
@@ -56,9 +56,9 @@ namespace MVCnowe.Controllers
             }
             return View(categoryFromDb);
         }
-        //post
-        [HttpPost] //co to robi
-        [ValidateAntiForgeryToken] //co to robi
+        
+        [HttpPost] 
+        [ValidateAntiForgeryToken] 
         public IActionResult EditCategory(Category obj)
         {
             if (ModelState.IsValid)
@@ -86,9 +86,9 @@ namespace MVCnowe.Controllers
             }
             return View(categoryFromDb);
         }
-        //post
-        [HttpPost] //co to robi
-        [ValidateAntiForgeryToken] //co to robi
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken] 
         public IActionResult DeleteCategoryPost(int? id)
         {
             var obj = _db.Categories.Find(id);

@@ -24,8 +24,8 @@ namespace MVCnowe.Controllers
              return View();
         }
         //post
-        [HttpPost] //co to robi
-        [ValidateAntiForgeryToken] //co to robi
+        [HttpPost] 
+        [ValidateAntiForgeryToken] 
         public IActionResult CreateUser(User obj)
         {
 
@@ -40,6 +40,70 @@ namespace MVCnowe.Controllers
             return View(obj);
 
         }
+        public IActionResult EditUser(int? id)
+        {
+
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var UserFromDb = _db.Users.Find(id);
+
+            if(UserFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(UserFromDb);
+        }
+        
+        [HttpPost] 
+        [ValidateAntiForgeryToken] 
+        public IActionResult EditUser(User obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Users.Update(obj);
+                _db.SaveChanges();
+                TempData["success"] = "Edited item";
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+        }
+
+        public IActionResult DeleteUser(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var UserFromDb = _db.Users.Find(id);
+
+            if (UserFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(UserFromDb);
+        }
+        //post
+        [HttpPost] 
+        [ValidateAntiForgeryToken] 
+        public IActionResult DeleteUserPost(int? id)
+        {
+            var obj = _db.Users.Find(id);
+
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            _db.Users.Remove(obj);
+            _db.SaveChanges();
+            TempData["success"] = "Deleted item";
+            return RedirectToAction("Index");
+
+        }
+
 
         public IActionResult CountUsers()
         {
