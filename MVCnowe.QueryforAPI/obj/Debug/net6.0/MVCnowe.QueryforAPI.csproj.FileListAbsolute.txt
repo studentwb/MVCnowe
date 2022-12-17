@@ -1,0 +1,12 @@
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\obj\Debug\net6.0\MVCnowe.QueryforAPI.csproj.AssemblyReference.cache
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\obj\Debug\net6.0\MVCnowe.QueryforAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\obj\Debug\net6.0\MVCnowe.QueryforAPI.AssemblyInfoInputs.cache
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\obj\Debug\net6.0\MVCnowe.QueryforAPI.AssemblyInfo.cs
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\obj\Debug\net6.0\MVCnowe.QueryforAPI.csproj.CoreCompileInputs.cache
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\bin\Debug\net6.0\MVCnowe.QueryforAPI.deps.json
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\bin\Debug\net6.0\MVCnowe.QueryforAPI.dll
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\bin\Debug\net6.0\MVCnowe.QueryforAPI.pdb
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\obj\Debug\net6.0\MVCnowe.QueryforAPI.dll
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\obj\Debug\net6.0\refint\MVCnowe.QueryforAPI.dll
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\obj\Debug\net6.0\MVCnowe.QueryforAPI.pdb
+C:\Users\48724\source\repos\MVCnowe\MVCnowe.QueryforAPI\obj\Debug\net6.0\ref\MVCnowe.QueryforAPI.dll

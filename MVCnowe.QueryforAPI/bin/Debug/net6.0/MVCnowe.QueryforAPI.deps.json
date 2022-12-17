@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MVCnowe.QueryforAPI/1.0.0": {
+        "runtime": {
+          "MVCnowe.QueryforAPI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MVCnowe.QueryforAPI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

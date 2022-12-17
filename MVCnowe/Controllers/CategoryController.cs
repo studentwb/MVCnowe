@@ -7,11 +7,12 @@ namespace MVCnowe.Controllers
     public class CategoryController : Controller
     {
         private readonly ApplicationDbContext _db;
+        private readonly ILogger _logger;
         public CategoryController(ApplicationDbContext db)
         {
             _db = db;
         }
-    
+        
         public IActionResult Index()
         {
             IEnumerable<Category> objCategoryList=_db.Categories;
