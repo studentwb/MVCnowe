@@ -16,3 +16,8 @@ html {
 body {
   margin-bottom: 60px;
 }
+newstyle {
+    color: red;
+    font-family: Arial;
+    font-size: 160%;
+}
